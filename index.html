@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>JB's Print&Go — Professional Printing Services</title>
   <link rel="icon" type="png" href="logo.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body>
 
+<body>
   <header class="site-header fade-in-top">
     <div class="container header-inner">
       <div class="brand">
@@ -18,7 +20,10 @@
           <p class="tagline">Fast. Quality. On-time — Print that speaks for you.</p>
         </div>
       </div>
-      <nav class="main-nav" aria-label="Main navigation">
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="#services" class="btn btn-outline">Services</a>
         <a href="#about" class="btn btn-outline">About</a>
         <a href="#why" class="btn btn-outline">Why Choose Us</a>
@@ -32,7 +37,9 @@
     <div class="container hero-inner">
       <div class="hero-left reveal">
         <img src="logo2.png" alt="JB's Print&Go Logo" class="hero-logo2">
-        <p class="hero-lead">Premium printing solutions for businesses, events, and creatives — delivered fast with exceptional quality.</p>
+        <p class="hero-lead">
+          Premium printing solutions for businesses, events, and creatives — delivered fast with exceptional quality.
+        </p>
         <ul class="hero-highlights">
           <li>Same-day and next-day production</li>
           <li>Eco-friendly paper options</li>
@@ -60,178 +67,147 @@
     </div>
   </section>
 
-<section id="services" class="section reveal">
-  <div class="container">
-    <h2 class="section-title">Services & Products</h2>
-    <p class="section-lead">We provide fast and reliable printing solutions.</p>
-    <p class="section-lead">◀ Scroll ▶</p>
+  <section id="services" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Services & Products</h2>
+      <p class="section-lead">We provide fast and reliable printing solutions.</p>
 
-    <div class="scroll-container">
-      <button id="scrollLeft" class="scroll-btn">
-          <img src="left-arrow.png" alt="Scroll left">
-      </button>
-      <div class="cards-grid" id="servicesScroll">
+      <div class="swiper services-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card">
+            <img src="service-printing.jpg" alt="Printing">
+            <h3>Printing: Colored &amp; B&amp;W</h3>
+            <p>High-quality prints available in both colored and black &amp; white — perfect for documents and projects.
+            </p>
+          </div>
 
-    <article class="card">
-      <img src="service-printing.jpg" alt="Printing">
-      <h3>Printing: Colored &amp; B&amp;W</h3>
-      <p>High-quality prints available in both colored and black &amp; white — perfect for documents, projects, and reports.</p>
-    </article>
+          <div class="swiper-slide card">
+            <img src="service-xerox.jpg" alt="Xerox">
+            <h3>Xerox: Colored &amp; B&amp;W</h3>
+            <p>Quick and accurate photocopying services — single or bulk copies done in minutes.</p>
+          </div>
 
-    <article class="card">
-      <img src="service-xerox.jpg" alt="Xerox">
-      <h3>Xerox: Colored &amp; B&amp;W</h3>
-      <p>Quick and accurate photocopying services for all your paperwork — single or bulk copies done in minutes.</p>
-    </article>
+          <div class="swiper-slide card">
+            <img src="service-idprint.jpg" alt="ID Printing">
+            <h3>ID Photo Printing</h3>
+            <p>Professional ID photo printing available in all standard sizes — 1x1, 2x2, passport, and more.</p>
+          </div>
 
-    <article class="card">
-      <img src="service-idprint.jpg" alt="ID Printing">
-      <h3>ID Photo Printing</h3>
-      <p>Professional ID photo printing available in all standard sizes — 1x1, 2x2, passport size, and more.</p>
-    </article>
+          <div class="swiper-slide card">
+            <img src="service-lamination.jpg" alt="Lamination">
+            <h3>ID Lamination</h3>
+            <p>Protect your important IDs and documents with durable lamination service.</p>
+          </div>
 
-    <article class="card">
-      <img src="service-lamination.jpg" alt="Lamination">
-      <h3>ID Lamination</h3>
-      <p>Protect your important IDs and documents with our durable lamination service that ensures lasting quality.</p>
-    </article>
-
-    <article class="card">
-      <img src="service-cutout.jpg" alt="Cardboard Cutout">
-      <h3>Cardboard Cutout</h3>
-      <p>Custom printed and shaped cardboard cutouts — ideal for decorations, events, and promotional displays.</p>
-    </article>
-
-      </div>
-      <button id="scrollRight" class="scroll-btn">
-          <img src="right-arrow.png" alt="Scroll right">
-      </button>
-    </div>
-  </div>
-</section>
-
-  <section id="about" class="section alt reveal">
-  <div class="container">
-    <div class="about-card">
-      <h2 class="section-title">About Us</h2>
-      <div class="two-col">
-        <div>
-          <h3>Who we are</h3>
-          <p>JB's Print&amp;Go is a family-owned print shop bringing fast, premium print solutions to people, small businesses, and event organizers.</p>
-        </div>
-        <div>
-          <h3>Our Values</h3>
-          <ul>
-            <li><b>Quality</b> – Top-grade presses and inks</li>
-            <li><b>Reliability</b> – We deliver on time</li>
-            <li><b>Mission</b> – Empower local brands through print</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section class="section reveal dual-section">
-    <div class="container dual-grid">
-      <section id="why" class="section reveal dual-section">
-        <div class="why-section">
-          <h2 class="section-title">Why Choose Us?</h2>
-          <div class="benefits-grid">
-            <div class="benefit reveal">
-              <h4>Speed &amp; Reliability</h4>
-              <p>Same-day proofs and fast turnarounds to meet tight deadlines.</p>
-            </div>
-            <div class="benefit reveal">
-              <h4>Premium Quality</h4>
-              <p>We use high-end printers and materials for crisp and vibrant results.</p>
-            </div>
-            <div class="benefit reveal">
-              <h4>Competitive Pricing</h4>
-              <p>Transparent quotes and affordable rates without sacrificing quality.</p>
-            </div>
-            <div class="benefit reveal">
-              <h4>Eco-Friendly Printing</h4>
-              <p>Committed to sustainable paper and ink options for greener printing.</p>
-            </div>
-            <div class="benefit reveal">
-              <h4>Personalized Service</h4>
-              <p>We provide one-on-one support to make sure every detail is perfect.</p>
-            </div>
+          <div class="swiper-slide card">
+            <img src="service-cutout.jpg" alt="Cardboard Cutout">
+            <h3>Cardboard Cutout</h3>
+            <p>Custom printed and shaped cardboard cutouts — ideal for decorations and events.</p>
           </div>
         </div>
-      </section>
 
-      <section id="testimonials" class="section reveal dual-section">
-        <div class="testimonials-section">
-          <h2 class="section-title">Testimonials</h2>
-          <div class="testimonials">
-            <blockquote class="reveal">
-              <p>"WORK IN PROGRESS - TO BE FILLED."</p>
-              <footer>— WORK IN PROGRESS - TO BE FILLED</footer>
-            </blockquote>
-            <blockquote class="reveal">
-              <p>"WORK IN PROGRESS - TO BE FILLED."</p>
-              <footer>— WORK IN PROGRESS - TO BE FILLED</footer>
-            </blockquote>
-            <blockquote class="reveal">
-              <p>"WORK IN PROGRESS - TO BE FILLED."</p>
-              <footer>— WORK IN PROGRESS - TO BE FILLED</footer>
-            </blockquote>
-            <blockquote class="reveal">
-              <p>"WORK IN PROGRESS - TO BE FILLED."</p>
-              <footer>— WORK IN PROGRESS - TO BE FILLED</footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
   </section>
 
-<section id="contact" class="section reveal">
-  <div class="container">
-    <h2 class="section-title">Contact Us</h2>
-    <div class="contact-grid">
-
-      <div class="contact-card reveal">
-        <h3>Address</h3>
-        <ul class="contact-list">
-          <li>
-            <img src="home.png" alt="Home icon">
-            <span>Area 7 Nawasa Line, Holy Spirit Q.C</span>
-          </li>
-        </ul>
+  <section id="about" class="section alt reveal">
+    <div class="container">
+      <div class="about-card">
+        <h2 class="section-title">About Us</h2>
+        <div class="two-col">
+          <div>
+            <h3>Who we are</h3>
+            <p>JB's Print&amp;Go is a family-owned print shop bringing fast, premium print solutions to people, small
+              businesses, and event organizers.</p>
+          </div>
+          <div>
+            <h3>Our Values</h3>
+            <ul>
+              <li><b>Quality</b> – Top-grade presses and inks</li>
+              <li><b>Reliability</b> – We deliver on time</li>
+              <li><b>Mission</b> – Empower local brands through print</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="contact-card reveal">
-        <h3>Phone & Email</h3>
-        <ul class="contact-list">
-          <li>
-            <img src="phone.png" alt="Phone icon">
-            <span><b>Phone:</b> (+63)96 3999 9999</span>
-          </li>
-          <li>
-            <img src="email.png" alt="Email icon">
-            <span><b>Email:</b> JBP&GO@gmail.com</span>
-          </li>
-        </ul>
+  <section id="why" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us?</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Speed &amp; Reliability</h3>
+          <p>Fast production with same-day or next-day turnaround options.</p>
+        </div>
+        <div class="card">
+          <h3>Premium Quality</h3>
+          <p>High-end printers and professional-grade materials for vivid, crisp results.</p>
+        </div>
+        <div class="card">
+          <h3>Competitive Pricing</h3>
+          <p>Affordable rates and transparent quotes — quality that fits your budget.</p>
+        </div>
+        <div class="card">
+          <h3>Eco-Friendly Printing</h3>
+          <p>Eco-friendly inks, recyclable paper, and responsible production.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-        <div class="contact-card reveal">
+  <section id="testimonials" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <p>"Fast, friendly, and super reliable! Got my prints the same day and the quality was top-notch."</p>
+          <footer>— Joaquin Dela Cruz B.</footer>
+        </div>
+        <div class="card">
+          <p>"My business cards came out perfect — colors and layout were exactly as expected!"</p>
+          <footer>— Mark Nelson D.</footer>
+        </div>
+        <div class="card">
+          <p>"Excellent service every time! The team is approachable, prices are fair, and results never disappoint."
+          </p>
+          <footer>— Hannah M.</footer>
+        </div>
+        <div class="card">
+          <p>"Highly recommend! They deliver fast without compromising quality."</p>
+          <footer>— Justine Kylle D.</footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Address</h3>
+          <ul class="contact-list">
+            <li><img src="home.png" alt="Home icon"><span>Area 7 Nawasa Line, Holy Spirit Q.C</span></li>
+          </ul>
+        </div>
+        <div class="contact-card">
+          <h3>Phone & Email</h3>
+          <ul class="contact-list">
+            <li><img src="phone.png" alt="Phone icon"><span><b>Phone:</b> (+63)99 7893 5156</span></li>
+            <li><img src="email.png" alt="Email icon"><span><b>Email:</b> JBP&GO@gmail.com</span></li>
+          </ul>
+        </div>
+        <div class="contact-card">
           <h3>Socials</h3>
-        <ul class="social-links">
-        <li>
-      <img src="facebook.png" alt="Facebook logo">
-          <a href="https://www.facebook.com">Facebook</a>
-        </li>
-        <li>
-          <img src="instagram.png" alt="Instagram logo">
-            <a href="https://www.instagram.com">Instagram</a>
-        </li>
-        <li>
-          <img src="linkedin.png" alt="LinkedIn logo">
-            <a href="https://www.linkedin.com">LinkedIn</a>
-            </li>
+          <ul class="social-links">
+            <li><img src="facebook.png" alt="Facebook logo"><a href="https://www.facebook.com">Facebook</a></li>
+            <li><img src="instagram.png" alt="Instagram logo"><a href="https://www.instagram.com">Instagram</a></li>
+            <li><img src="linkedin.png" alt="LinkedIn logo"><a href="https://www.linkedin.com">LinkedIn</a></li>
           </ul>
         </div>
       </div>
@@ -241,123 +217,50 @@
   <footer class="site-footer fade-in-bottom">
     <div class="container">
       <p>© <span id="year"></span> JB's Print&amp;Go — All rights reserved.</p>
-      <p class="creator">Website designed and developed by <strong><a href="https://github.com/WDTEscanor7DS">WDTEscanor7DS</a></strong></p>
+      <p class="creator">Website designed and developed by <strong><a href="https://github.com/WDTEscanor7DS"
+            target="_blank">WDTEscanor7DS</a></strong></p>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-        } else {
-          e.target.classList.remove('visible');
-        }
-      });
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => e.target.classList.toggle('visible', e.isIntersecting));
     }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.reveal, .fade-in, .fade-in-video')
-      .forEach(el => observer.observe(el));
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          const headerOffset = document.querySelector('.site-header').offsetHeight;
-          const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.scrollY - headerOffset;
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
+        const target = document.querySelector(link.getAttribute('href'));
+        if (!target) return;
+        const offset = document.querySelector('.site-header').offsetHeight;
+        window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
       });
     });
 
-(function () {
-  const sc = document.getElementById('servicesScroll');
-  const btnLeft = document.getElementById('scrollLeft');
-  const btnRight = document.getElementById('scrollRight');
-  if (!sc) return;
-
-  const originals = Array.from(sc.children);
-  const clonesBefore = originals.map(c => c.cloneNode(true));
-  const clonesAfter = originals.map(c => c.cloneNode(true));
-  clonesBefore.forEach(c => sc.prepend(c));
-  clonesAfter.forEach(c => sc.append(c));
-
-  const totalWidth = sc.scrollWidth / 3;
-  sc.scrollLeft = totalWidth;
-
-  let isTeleporting = false;
-
-  function teleport(x) {
-    isTeleporting = true;
-    sc.style.scrollBehavior = 'auto';
-    sc.scrollLeft = x;
-    requestAnimationFrame(() => {
-      sc.style.scrollBehavior = 'smooth';
-      isTeleporting = false;
-    });
-  }
-
-  function checkBounds() {
-    if (isTeleporting) return;
-    const total = sc.scrollWidth;
-    const third = total / 3;
-    const pos = sc.scrollLeft;
-    if (pos <= third * 0.1) teleport(pos + third);
-    else if (pos >= third * 1.9) teleport(pos - third);
-  }
-
-  function snapToCenter() {
-    const cards = sc.querySelectorAll('.card');
-    const scCenter = sc.scrollLeft + sc.offsetWidth / 2;
-
-    let closestCard = null;
-    let closestDist = Infinity;
-
-    cards.forEach(card => {
-      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-      const dist = Math.abs(cardCenter - scCenter);
-      if (dist < closestDist) {
-        closestDist = dist;
-        closestCard = card;
-      }
+    const swiper = new Swiper('.services-swiper', {
+      slidesPerView: 1.1,
+      spaceBetween: 20,
+      centeredSlides: true,
+      loop: true,
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } },
     });
 
-    if (closestCard) {
-      const targetScroll =
-        closestCard.offsetLeft -
-          sc.offsetWidth / 2 +
-          closestCard.offsetWidth / 2 - 60;
-      sc.scrollTo({ left: targetScroll, behavior: 'smooth' });
-    }
-  }
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mainNav').classList.toggle('show');
+    });
 
-  let scrollTimeout;
-  sc.addEventListener('scroll', () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      checkBounds();
-      snapToCenter();
-    }, 250);
-  });
-
-  btnLeft?.addEventListener('click', () => {
-    sc.scrollBy({ left: -350, behavior: 'smooth' });
-    setTimeout(snapToCenter, 400);
-  });
-
-  btnRight?.addEventListener('click', () => {
-    sc.scrollBy({ left: 350, behavior: 'smooth' });
-    setTimeout(snapToCenter, 400);
-  });
-})();
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      document.body.style.setProperty("--overlay-y", `${scrollY * -0.25}px`);
+    });
   </script>
-
 </body>
+
 </html>
