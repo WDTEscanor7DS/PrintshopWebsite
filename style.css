@@ -22,10 +22,21 @@ html {
 body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: var(--text);
-  background: var(--bg);
+  background-color: #d32f2f;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("background_overlay.png") center center / cover no-repeat;
+  filter: blur(4px) brightness(0.9);
+  opacity: 0.90;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .container {
@@ -166,7 +177,7 @@ body {
 }
 
 .hero-gallery img {
-  width: 500px;
+  width: 550px;
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
@@ -175,10 +186,19 @@ body {
   transform: scale(1.05);
 }
 
-.promo-section {
+.promo-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 80px 0;
-  background: rgba(0, 0, 0, 0.05);
+}
+
+.promo-section video {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .background-video {
@@ -189,15 +209,23 @@ body {
 }
 
 .section {
-  padding: 60px 0;
+  padding: 80px 0;
   background: transparent;
+  opacity: 0.80;
   transition: background 0.4s ease;
+  display: flex;
+  justify-content: center;
 }
 
 .section .container {
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .section-title {
@@ -211,6 +239,46 @@ body {
   text-align: center;
   margin-bottom: 12px;
   color: var(--text);
+}
+
+.services-swiper {
+  position: relative;
+  padding-bottom: 45px;
+}
+
+.services-swiper .swiper-pagination {
+  bottom: -5px !important;
+}
+
+.services-swiper .swiper-button-prev,
+.services-swiper .swiper-button-next {
+  color: var(--accent);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.services-swiper .swiper-button-prev:hover,
+.services-swiper .swiper-button-next:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+#services .card {
+  background: #ffffff;
+  backdrop-filter: none;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
 }
 
 .cards-grid {
