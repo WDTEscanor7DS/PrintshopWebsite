@@ -1,0 +1,15 @@
+<?php
+// Copy this file to config.php and fill in your database credentials.
+// Do NOT commit config.php to version control.
+
+$host     = 'localhost';
+$db_name  = 'your_database_name';
+$username = 'your_database_user';
+$password = 'your_database_password';
+
+$conn = new mysqli($host, $username, $password, $db_name);
+
+if ($conn->connect_error) {
+    error_log('Database connection failed: ' . $conn->connect_error);
+    die('A database error occurred. Please try again later.');
+}
